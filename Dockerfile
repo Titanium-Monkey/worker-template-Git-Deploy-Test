@@ -12,6 +12,8 @@ FROM runpod/base:0.4.0-cuda11.8.0
 # RUN /bin/bash /setup.sh && \
 #     rm /setup.sh
 
+# GitHub Integration Test to cause docker to fetch on every run
+ADD http://date.jsontest.com /etc/build-date
 
 # Python dependencies
 COPY builder/requirements.txt /requirements.txt
